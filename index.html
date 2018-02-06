@@ -5,63 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <titlea>animal-zoo-Loop</title>
+    <title>JS Loops</title>
+    <style>
+        body {
+            background-color: green;
+        }
 
+        h1 {
+            color: blue;
+        }
+    </style>
 </head>
 
 <body>
-
-<script type="text/javascript">
-
-var animals = ["zebra", "rhino", "giraffe", "owl"]
-
-console.log(animals[0]);
-console.log(animals[1]);
-console.log(animals[2]);
-console.log(animals[3]);
-
-// var length = animals.length
-console.log(length);
-
-for (var i =0; i < animals.length; i++) {
-    console.log(animals[i]);
-}
-
-// for loop, iterates thru something, an array or result from db
-// for(){console.log(i)}; because it will change thru every iteration.
-// for(parameter; condition; increment;){what needs to happen after each iteration}
-for(var i = 0; i < 10; i++){
-    console.log(i); 
-}
-// <= includes the #5, 
-for(var i = 0; i <= 5; i++){
-    console.log('I love the number' +i); 
-}
-
-// while loop, var i defined outside loop
-var i = 0;
-while(i < 10){
-    console.log(i);
-    i++;
-}
-
-// for each loop, iterates thru arrays,...
-var numbers = [33,54,35,56,21];
-numbers.forEach(function(number){
-    console.log(number);
-});
-// for loop and while loop work too
-var numbers = [33,54,35,56,];
-for(var i = 0; i < numbers.length; i++){
-    console.log('testing ' +numbers[i])}
+    <h1 style="text-align: center;"> LOOPS, LOOPS and more LOOPS!</h1>
 
 
-// OR dynamic version
-for(var i =0; i<numbers.length; i++){
-    console.log(numbers[i]);
-}
+    <script type="text/javascript">
+        var animals = ["zebra", "rhino", "giraffe", "owl"]
 
-</script>
+        console.log(animals[0]);
+        console.log(animals[1]);
+        console.log(animals[2]);
+        console.log(animals[3]);
+
+        // var length = animals.length
+        console.log(length);
+
+        for (var i = 0; i < animals.length; i++) {
+            console.log(animals[i]);
+        }
+
+        // for loop, iterates thru something, an array or result from db
+        // for(){console.log(i)}; because it will change thru every iteration.
+        // for(parameter; condition; increment;){what needs to happen after each iteration}
+        for (var i = 0; i < 10; i++) {
+            console.log(i);
+        }
+        // <= includes the #5, 
+        for (var i = 0; i <= 5; i++) {
+            console.log('I love the number' + i);
+        }
+
+        // while loop, var i defined outside loop
+        var i = 0;
+        while (i < 10) {
+            console.log(i);
+            i++;
+        }
+
+        // for each loop, iterates thru arrays,...
+        var numbers = [33, 54, 35, 56, 21];
+        numbers.forEach(function (number) {
+            console.log(number);
+        });
+        // for loop and while loop work too
+        // dynamic version,  also in reverse
+        var numbers = [33, 54, 35, 56, ];
+        numbers.reverse();
+        for (var i = 0; i < numbers.length; i++) {
+            console.log('testing ' + numbers[i])
+        }
+
+        // Conditionals
+        
+    </script>
 </body>
 
 </html>

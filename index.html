@@ -18,8 +18,10 @@
 </head>
 
 <body>
-    <h1 style="text-align: center;"> LOOPS, LOOPS and more LOOPS!</h1>
-
+    <div style="text-align: center;">
+        <!-- Note added id="heading" for DOM .innerHTML function in Events below-->
+        <h1 id="heading"> LOOPS, LOOPS and more LOOPS!</h1>
+    </div>
 
     <script type="text/javascript">
         var animals = ["zebra", "rhino", "giraffe", "owl"]
@@ -28,14 +30,14 @@
         console.log(animals[1]);
         console.log(animals[2]);
         console.log(animals[3]);
-
-        // var length = animals.length
+        // or
+        var length = animals.length
         console.log(length);
 
         for (var i = 0; i < animals.length; i++) {
             console.log(animals[i]);
         }
-
+        // LOOPS ->  for(){}
         // for loop, iterates thru something, an array or result from db
         // for(){console.log(i)}; because it will change thru every iteration.
         // for(parameter; condition; increment;){what needs to happen after each iteration}
@@ -67,8 +69,123 @@
             console.log('testing ' + numbers[i])
         }
 
-        // Conditionals
-        
+        // Conditionals ->  if(){}
+        if (1 == 2) {
+            console.log('this is true');
+        }
+        // may use variables too != (not equal) && (and) || (or)
+        var var1 = 2;
+        var var2 = 3;
+        if (var1 != var2) {
+            console.log('this is true');
+        }
+
+        // if(){}esle{}  
+        var var1 = 2;
+        var var2 = 3;
+        if (var1 == var2 && var1 == 2) {
+            console.log('this is true');
+        } else {
+            console.log('this is false');
+        }
+        // switch statements
+
+        // Object Literal answer -> Brad
+        var person = {
+            firstName: 'Brad',
+            lastName: 'Traversy',
+            age: 34,
+        }
+        console.log(person.firstName);
+        // Object Literal
+        var person = {
+            firstName: 'Brad',
+            lastName: 'Traversy',
+            age: 34,
+            children: ['Wes', 'Nando', 'Nina'],
+            address: {
+                street: '1020 Martin',
+                city: 'Laredo',
+                state: 'Texas'
+            },
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        // answer -> Nando
+        console.log(person.children[1]);
+        // answer -> Texas
+        console.log(person.address.state);
+        // answer -> Brad Traversy remember to add the function!!!!
+        console.log(person.fullName());
+
+        //Object(properties) Constructor
+        var apple = new Object();
+        apple.color = 'red';
+        apple.shape = 'round';
+        apple.describe = function () {
+            return 'An apple is the color ' + this.color + ' and the shape is ' + this.shape;
+        }
+        console.log(apple)
+        console.log(apple.describe())
+
+        // Constructor Pattern
+        function Fruit(name, color, shape) {
+            this.name = name;
+            this.color = color;
+            this.shape = shape;
+
+            this.describe = function () {
+                return 'A ' + this.name + ' is the color ' + this.color + ' and is the shape ' + this.shape;
+            }
+
+        }
+        var apple = new Fruit('apple', 'red', 'round');
+        console.log(apple);
+
+        var pear = new Fruit('pear', 'green', 'oval');
+        console.log(pear);
+        console.log(pear.describe());
+
+        // Constructor Arrays
+        var users = [{
+                name: 'John Doe',
+                age: 30
+            },
+            {
+                name: 'Sonia B',
+                age: 27
+            },
+            {
+                name: 'Wes Ley',
+                age: 17,
+            }
+        ];
+        console.log(users[0].age);
+
+        // Events remember <script> is in between button and function
+        <button onclick = "doClick()" > Click Me! </button>
+        // <script.....
+        function doClick() {
+            alert('You Clicked!');
+        }
+        <button onclick = "changeText(this)" > Click Me! </button>
+
+        function changeText(id) {
+            id.innerHTML = 'You Clicked!';
+        }
+        // Using DOM function .innerHTML
+        <button onclick = "changeText()" > Click Me! </button>
+
+        function changeText() {
+            var heading = document.getElementById('heading');
+            heading.innerHTML = 'You Clicked!';
+        }
+        // Learning JavaScript with Brad Traversy
+        // date
+        // onmouse
+        // FORMS
+
     </script>
 </body>
 

@@ -17,11 +17,17 @@
     </style>
 </head>
 <body>
-        <h1 style="text-align: center;"> LOOPS, LOOPS and more LOOPS!</h1>
-
-
+    <div style="text-align: center;">
+        <h1 id="heading"> LOOPS, LOOPS and more LOOPS!</h1>
+ 
+    </div>
+    <button onclick="changeText()">Click Me!</button>
     <script type="text/javascript">
-        // use for testing loops and conditionals
+
+ function changeText(){
+        var heading = document.getElementById('heading');
+        heading.innerHTML = 'You Clicked!';
+ }
     </script>
 </body>
 
